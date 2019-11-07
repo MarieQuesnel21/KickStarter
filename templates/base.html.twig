@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+ 
+            <h1>{{ projects|length }} projects:</h1>
+            <ul>
+                {% for projects in projects %}
+                    
+                        <li>{{projects}}</li>
+                    
+                {% endfor %}
+
+            </ul>
+
+        <p> {{ projects|join(', ', ' and ') }} 
+    </body>
+</html>
